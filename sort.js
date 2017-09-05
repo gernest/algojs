@@ -27,5 +27,19 @@ function selection(a){
     }
     return a;
 }
+function insertion(a){
+    let size=a.length;
+    for(let i=0;i<size;i++){
+        let tmp=a[i];
+        let location=i
+        while(location>0&&a[location-1]>tmp){
+            a[location]=a[location-1];
+            location--
+        }
+        a[location]=tmp
+    }
+    return a;
+}
 module.exports.bubble=bubble;
 module.exports.selection=selection;
+module.exports.insertion=insertion;
