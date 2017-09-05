@@ -12,4 +12,20 @@ function bubble(a){
     }
     return a;
 }
+function selection(a){
+    let size=a.length;
+    for( let i=0;i<size;i++){
+        let tmp=a[i]
+        let min=i;
+        for(j=i+1;j<size;j++){
+            if(a[j]<a[min]){
+                min=j
+            }
+        }
+        a[i]=a[min]
+        a[min]=tmp
+    }
+    return a;
+}
 module.exports.bubble=bubble;
+module.exports.selection=selection;
